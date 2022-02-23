@@ -17,11 +17,11 @@ registration, using the following protocol.  `<client id>` is the unique MQTT cl
 		
         The Status payload is a json object containing :
     	
-        `{ "clientid": <client id>, "connected": <either 1 or 0>, "version": "<text string>", "services": [<a dictionary of services that this device wants to use>] }`
+        `{ "clientId": <client id>, "connected": <either 1 or 0>, "version": "<text string>", "services": [<a dictionary of services that this device wants to use>] }`
    	
         for example:
 		
-        `{ "clientid": "fe001", "connected": 1, "version": "v1.0 ALPHA", "services": {"t1": "temperature", "t2": "temperature"} }`
+        `{ "clientId": "fe001", "connected": 1, "version": "v1.0 ALPHA", "services": {"t1": "temperature", "t2": "temperature"} }`
 
 		please note: in the example, the device is registering that it is equipped with two temperature sensors. The t1 and t2 are just unique arbitrary identifiers that distinguish one service from another within a device. The version field can contain any string you like and is displayed within the GX console and on VRM.
 
@@ -59,7 +59,7 @@ registration, using the following protocol.  `<client id>` is the unique MQTT cl
     
     For example:
 
-		{ "clientid": "fe001", "version": "v1.0", "connected": 0, "services": {"t1": "temperature", "t2": "temperature"}}
+		{ "clientId": "fe001", "version": "v1.0", "connected": 0, "services": {"t1": "temperature", "t2": "temperature"}}
 	
     
     please note: on disconnect the contents of the "services" are actually irrelevant as all 
